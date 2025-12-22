@@ -1,0 +1,131 @@
+1764663124.276409 [0] cyclonedds: config: Domain/General/MulticastRecvNetworkInterfaceAddresses/#text: preferred {}
+1764663124.276431 [0] cyclonedds: config: Domain/General/Interfaces/NetworkInterface[@autodetermine]: false {}
+1764663124.276435 [0] cyclonedds: config: Domain/General/Interfaces/NetworkInterface[@name]: wlp59s0f0 {1}
+1764663124.276438 [0] cyclonedds: config: Domain/General/Interfaces/NetworkInterface[@address]:  {}
+1764663124.276441 [0] cyclonedds: config: Domain/General/Interfaces/NetworkInterface[@priority]: default {}
+1764663124.276444 [0] cyclonedds: config: Domain/General/Interfaces/NetworkInterface[@prefer_multicast]: false {}
+1764663124.276446 [0] cyclonedds: config: Domain/General/Interfaces/NetworkInterface[@presence_required]: true {}
+1764663124.276449 [0] cyclonedds: config: Domain/General/Interfaces/NetworkInterface[@multicast]: default {}
+1764663124.276451 [0] cyclonedds: config: Domain/General/ExternalNetworkAddress/#text: auto {}
+1764663124.276453 [0] cyclonedds: config: Domain/General/ExternalNetworkMask/#text: 0.0.0.0 {}
+1764663124.276456 [0] cyclonedds: config: Domain/General/AllowMulticast/#text: default {}
+1764663124.276458 [0] cyclonedds: config: Domain/General/MulticastTimeToLive/#text: 32 {}
+1764663124.276461 [0] cyclonedds: config: Domain/General/DontRoute/#text: false {}
+1764663124.276463 [0] cyclonedds: config: Domain/General/Transport/#text: udp {}
+1764663124.276466 [0] cyclonedds: config: Domain/General/EnableMulticastLoopback/#text: true {}
+1764663124.276468 [0] cyclonedds: config: Domain/General/MaxMessageSize/#text: 14720 B {}
+1764663124.276471 [0] cyclonedds: config: Domain/General/MaxRexmitMessageSize/#text: 1456 B {}
+1764663124.276473 [0] cyclonedds: config: Domain/General/FragmentSize/#text: 1344 B {}
+1764663124.276476 [0] cyclonedds: config: Domain/General/RedundantNetworking/#text: false {}
+1764663124.276478 [0] cyclonedds: config: Domain/General/EntityAutoNaming/#text: empty {}
+1764663124.276481 [0] cyclonedds: config: Domain/General/EntityAutoNaming[@seed]: 2662678937 2965321237 441646007 2553906688 1797959033 3842319067 281305202 3801550441 {}
+1764663124.276485 [0] cyclonedds: config: Domain/Sizing/ReceiveBufferSize/#text: 1 MiB {}
+1764663124.276487 [0] cyclonedds: config: Domain/Sizing/ReceiveBufferChunkSize/#text: 128 KiB {}
+1764663124.276490 [0] cyclonedds: config: Domain/Compatibility/StandardsConformance/#text: lax {}
+1764663124.276492 [0] cyclonedds: config: Domain/Compatibility/ExplicitlyPublishQosSetToDefault/#text: false {}
+1764663124.276495 [0] cyclonedds: config: Domain/Compatibility/ManySocketsMode/#text: single {}
+1764663124.276497 [0] cyclonedds: config: Domain/Compatibility/AssumeRtiHasPmdEndpoints/#text: false {}
+1764663124.276500 [0] cyclonedds: config: Domain/Discovery/Tag/#text:  {}
+1764663124.276502 [0] cyclonedds: config: Domain/Discovery/ExternalDomainId/#text: 0 {}
+1764663124.276505 [0] cyclonedds: config: Domain/Discovery/DSGracePeriod/#text: 30 s {}
+1764663124.276508 [0] cyclonedds: config: Domain/Discovery/ParticipantIndex/#text: none {}
+1764663124.276510 [0] cyclonedds: config: Domain/Discovery/MaxAutoParticipantIndex/#text: 9 {}
+1764663124.276512 [0] cyclonedds: config: Domain/Discovery/SPDPMulticastAddress/#text: 239.255.0.1 {}
+1764663124.276515 [0] cyclonedds: config: Domain/Discovery/SPDPInterval/#text: 30 s {}
+1764663124.276517 [0] cyclonedds: config: Domain/Discovery/DefaultMulticastAddress/#text: auto {}
+1764663124.276520 [0] cyclonedds: config: Domain/Discovery/Ports/Base/#text: 7400 {}
+1764663124.276522 [0] cyclonedds: config: Domain/Discovery/Ports/DomainGain/#text: 250 {}
+1764663124.276525 [0] cyclonedds: config: Domain/Discovery/Ports/ParticipantGain/#text: 2 {}
+1764663124.276527 [0] cyclonedds: config: Domain/Discovery/Ports/MulticastMetaOffset/#text: 0 {}
+1764663124.276530 [0] cyclonedds: config: Domain/Discovery/Ports/UnicastMetaOffset/#text: 10 {}
+1764663124.276532 [0] cyclonedds: config: Domain/Discovery/Ports/MulticastDataOffset/#text: 1 {}
+1764663124.276534 [0] cyclonedds: config: Domain/Discovery/Ports/UnicastDataOffset/#text: 11 {}
+1764663124.276541 [0] cyclonedds: config: Domain/Discovery/EnableTopicDiscoveryEndpoints/#text: false {}
+1764663124.276544 [0] cyclonedds: config: Domain/Discovery/LeaseDuration/#text: 10 s {}
+1764663124.276556 [0] cyclonedds: config: Domain/Tracing/Category/#text: fatal,error,warning,info,config {1}
+1764663124.276559 [0] cyclonedds: config: Domain/Tracing/OutputFile/#text: cdds.log {1}
+1764663124.276561 [0] cyclonedds: config: Domain/Tracing/AppendToFile/#text: false {}
+1764663124.276564 [0] cyclonedds: config: Domain/Tracing/PacketCaptureFile/#text:  {}
+1764663124.276566 [0] cyclonedds: config: Domain/Internal/DeliveryQueueMaxSamples/#text: 256 {}
+1764663124.276569 [0] cyclonedds: config: Domain/Internal/PrimaryReorderMaxSamples/#text: 128 {}
+1764663124.276571 [0] cyclonedds: config: Domain/Internal/SecondaryReorderMaxSamples/#text: 128 {}
+1764663124.276576 [0] cyclonedds: config: Domain/Internal/DefragUnreliableMaxSamples/#text: 4 {}
+1764663124.276579 [0] cyclonedds: config: Domain/Internal/DefragReliableMaxSamples/#text: 16 {}
+1764663124.276581 [0] cyclonedds: config: Domain/Internal/BuiltinEndpointSet/#text: writers {}
+1764663124.276584 [0] cyclonedds: config: Domain/Internal/MeasureHbToAckLatency/#text: false {}
+1764663124.276586 [0] cyclonedds: config: Domain/Internal/UnicastResponseToSPDPMessages/#text: true {}
+1764663124.276590 [0] cyclonedds: config: Domain/Internal/SynchronousDeliveryPriorityThreshold/#text: 0 {}
+1764663124.276592 [0] cyclonedds: config: Domain/Internal/SynchronousDeliveryLatencyBound/#text: inf {}
+1764663124.276595 [0] cyclonedds: config: Domain/Internal/MaxParticipants/#text: 0 {}
+1764663124.276597 [0] cyclonedds: config: Domain/Internal/AccelerateRexmitBlockSize/#text: 0 {}
+1764663124.276599 [0] cyclonedds: config: Domain/Internal/RetransmitMerging/#text: never {}
+1764663124.276602 [0] cyclonedds: config: Domain/Internal/RetransmitMergingPeriod/#text: 5 ms {}
+1764663124.276604 [0] cyclonedds: config: Domain/Internal/HeartbeatInterval/#text: 100 ms {}
+1764663124.276607 [0] cyclonedds: config: Domain/Internal/HeartbeatInterval[@min]: 5 ms {}
+1764663124.276609 [0] cyclonedds: config: Domain/Internal/HeartbeatInterval[@minsched]: 20 ms {}
+1764663124.276612 [0] cyclonedds: config: Domain/Internal/HeartbeatInterval[@max]: 8 s {}
+1764663124.276614 [0] cyclonedds: config: Domain/Internal/MaxQueuedRexmitBytes/#text: 512 KiB {}
+1764663124.276616 [0] cyclonedds: config: Domain/Internal/MaxQueuedRexmitMessages/#text: 200 {}
+1764663124.276619 [0] cyclonedds: config: Domain/Internal/WriterLingerDuration/#text: 1 s {}
+1764663124.276621 [0] cyclonedds: config: Domain/Internal/SocketReceiveBufferSize[@min]: default {}
+1764663124.276624 [0] cyclonedds: config: Domain/Internal/SocketReceiveBufferSize[@max]: default {}
+1764663124.276626 [0] cyclonedds: config: Domain/Internal/SocketSendBufferSize[@min]: 64 KiB {}
+1764663124.276629 [0] cyclonedds: config: Domain/Internal/SocketSendBufferSize[@max]: default {}
+1764663124.276631 [0] cyclonedds: config: Domain/Internal/NackDelay/#text: 100 ms {}
+1764663124.276634 [0] cyclonedds: config: Domain/Internal/AckDelay/#text: 10 ms {}
+1764663124.276636 [0] cyclonedds: config: Domain/Internal/AutoReschedNackDelay/#text: 3 s {}
+1764663124.276639 [0] cyclonedds: config: Domain/Internal/PreEmptiveAckDelay/#text: 10 ms {}
+1764663124.276641 [0] cyclonedds: config: Domain/Internal/ScheduleTimeRounding/#text: 0 s {}
+1764663124.276644 [0] cyclonedds: config: Domain/Internal/DDSI2DirectMaxThreads/#text: 1 {}
+1764663124.276647 [0] cyclonedds: config: Domain/Internal/SquashParticipants/#text: false {}
+1764663124.276649 [0] cyclonedds: config: Domain/Internal/SPDPResponseMaxDelay/#text: 0 s {}
+1764663124.276651 [0] cyclonedds: config: Domain/Internal/LateAckMode/#text: false {}
+1764663124.276654 [0] cyclonedds: config: Domain/Internal/RetryOnRejectBestEffort/#text: false {}
+1764663124.276656 [0] cyclonedds: config: Domain/Internal/GenerateKeyhash/#text: false {}
+1764663124.276659 [0] cyclonedds: config: Domain/Internal/MaxSampleSize/#text: 2147483647 B {}
+1764663124.276661 [0] cyclonedds: config: Domain/Internal/WriteBatch/#text: false {}
+1764663124.276666 [0] cyclonedds: config: Domain/Internal/LivelinessMonitoring/#text: false {}
+1764663124.276669 [0] cyclonedds: config: Domain/Internal/LivelinessMonitoring[@StackTraces]: true {}
+1764663124.276671 [0] cyclonedds: config: Domain/Internal/LivelinessMonitoring[@Interval]: 1 s {}
+1764663124.276674 [0] cyclonedds: config: Domain/Internal/MonitorPort/#text: -1 {}
+1764663124.276676 [0] cyclonedds: config: Domain/Internal/PrioritizeRetransmit/#text: true {}
+1764663124.276679 [0] cyclonedds: config: Domain/Internal/UseMulticastIfMreqn/#text: 0 {}
+1764663124.276681 [0] cyclonedds: config: Domain/Internal/RediscoveryBlacklistDuration/#text: 0 s {}
+1764663124.276684 [0] cyclonedds: config: Domain/Internal/RediscoveryBlacklistDuration[@enforce]: false {}
+1764663124.276686 [0] cyclonedds: config: Domain/Internal/MultipleReceiveThreads/#text: default {}
+1764663124.276689 [0] cyclonedds: config: Domain/Internal/MultipleReceiveThreads[@maxretries]: 4294967295 {}
+1764663124.276692 [0] cyclonedds: config: Domain/Internal/Test/XmitLossiness/#text: 0 {}
+1764663124.276695 [0] cyclonedds: config: Domain/Internal/Watermarks/WhcLow/#text: 1 KiB {}
+1764663124.276697 [0] cyclonedds: config: Domain/Internal/Watermarks/WhcHigh/#text: 500 KiB {}
+1764663124.276700 [0] cyclonedds: config: Domain/Internal/Watermarks/WhcHighInit/#text: 30 KiB {}
+1764663124.276702 [0] cyclonedds: config: Domain/Internal/Watermarks/WhcAdaptive/#text: true {}
+1764663124.276705 [0] cyclonedds: config: Domain/Internal/BurstSize/MaxRexmit/#text: 1 MiB {}
+1764663124.276707 [0] cyclonedds: config: Domain/Internal/BurstSize/MaxInitTransmit/#text: 4294967295 {}
+1764663124.276710 [0] cyclonedds: config: Domain/Internal/EnableExpensiveChecks/#text:  [ignored] {}
+1764663124.276713 [0] cyclonedds: config: Domain/TCP/NoDelay/#text: true {}
+1764663124.276715 [0] cyclonedds: config: Domain/TCP/Port/#text: -1 {}
+1764663124.276718 [0] cyclonedds: config: Domain/TCP/ReadTimeout/#text: 2 s {}
+1764663124.276720 [0] cyclonedds: config: Domain/TCP/WriteTimeout/#text: 2 s {}
+1764663124.276723 [0] cyclonedds: config: Domain/TCP/AlwaysUsePeeraddrForUnicast/#text: false {}
+1764663124.276725 [0] cyclonedds: config: Domain[@Id]: 0 {}
+1764663124.276744 [0] cyclonedds: started at 1764663124.06276730 -- 2025-12-02 16:12:04+08:00
+1764663124.276748 [0] cyclonedds: udp initialized
+1764663124.276985 [0] cyclonedds: interfaces: lo udp/127.0.0.1(q1) enp58s0 udp/192.168.123.222(q9) wlp59s0f0 udp/192.168.252.28(q9) docker0 udp/172.17.0.1(q9)
+1764663124.276993 [0] cyclonedds: selected interfaces: wlp59s0f0 (index 3 priority 0)
+1764663124.276996 [0] cyclonedds: presumed robust multicast support, use for everything
+1764663124.277006 [0] cyclonedds: ownip: udp/192.168.252.28
+1764663124.277009 [0] cyclonedds: extmask: invalid/0 (not applicable)
+1764663124.277011 [0] cyclonedds: SPDP MC: udp/239.255.0.1
+1764663124.277013 [0] cyclonedds: default MC: udp/239.255.0.1
+1764663124.277015 [0] cyclonedds: SSM support included
+1764663124.277110 [0] cyclonedds: failed to increase socket receive buffer size to 1048576 bytes, continuing with 425984 bytes
+1764663124.277119 [0] cyclonedds: rtps_init: uc ports: disc 0 data 0
+1764663124.277122 [0] cyclonedds: rtps_init: domainid 0 participantid -2
+1764663124.277125 [0] cyclonedds: Unicast Ports: discovery 40386 data 40386
+1764663124.277132 [0] cyclonedds: failed to increase socket receive buffer size to 1048576 bytes, continuing with 425984 bytes
+1764663124.277141 [0] cyclonedds: failed to increase socket receive buffer size to 1048576 bytes, continuing with 425984 bytes
+1764663124.277146 [0] cyclonedds: Multicast Ports: discovery 7400 data 7401 
+1764663124.277151 [0] cyclonedds: failed to increase socket receive buffer size to 1048576 bytes, continuing with 425984 bytes
+1764663124.277160 [0] cyclonedds: interface wlp59s0f0: transmit port 53160
+1764663125.285192 [0] cyclonedds: udp finalized
+1764663125.285524 [0] cyclonedds: Finis.

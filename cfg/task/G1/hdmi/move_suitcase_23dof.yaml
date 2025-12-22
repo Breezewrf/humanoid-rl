@@ -1,0 +1,85 @@
+# @package task
+defaults:
+  - base/hdmi-base-23dof-amp
+  - _self_
+
+name: G1TrackSuitcase23DOF
+
+viewer:
+  # show retarget motion
+  lookat: [0., -1., 0.5]
+  eye: [2., -3, 2.]
+
+  # show training
+  # lookat: [0., 0., 0.]
+  # eye: [2.0, 2.0, 2.0]
+
+  # show ref contact pos
+  # lookat: [0., 1., 0.]
+  # eye: [0., -2., 1.]
+
+max_episode_length: 500
+
+robot:
+  name: g1_23dof
+  robot_type: g1_23dof
+  # override_params:
+  #   init_state:
+  #     joint_pos:
+  #       left_wrist_yaw_joint: -0.4
+  #       right_wrist_yaw_joint: 0.4
+    # actuators:
+    #   arms:
+    #     stiffness:
+    #       ".*_wrist_roll_joint": 4.0
+    #       ".*_wrist_pitch_joint": 4.0
+    #       ".*_wrist_yaw_joint": 4.0
+
+command:
+  data_path: data/motion/g1/omomo/sub1_suitcase_011_23dof
+  root_body_name: "pelvis"
+
+  object_asset_name: "suitcase"
+  object_body_name:  "suitcase"
+
+  # contact_target_pos_offset:
+  #   - [-0.1, 0.18, 0.25]  # left wrist
+  #   - [-0.1,-0.18, 0.25]  # right wrist
+  # contact_eef_pos_offset:
+  #   - [0.05, 0.0, 0.0]  # left wrist
+  #   - [0.05, 0.0, 0.0]  # right wrist
+  contact_target_pos_offset:
+    - [-0.10,  0.225, 0.205]  # left wrist
+    - [-0.10, -0.225, 0.205]  # right wrist
+  contact_eef_pos_offset:
+    - [0.05, 0.0, 0.0]  # left wrist
+    - [0.05, 0.0, 0.0]  # right wrist
+
+randomization:
+  object_body_randomization:
+    static_dynamic_friction_ratio_range: [1.0, 2.0]
+    dynamic_friction_range: [0.3, 0.8]
+    restitution_range: [0.0, 0.2]
+    mass_range: [1.2, 1.8]
+  
+  body_scale:
+    name: "suitcase"
+    scale_range: [0.9, 1.1]
+
+# Modify reward weights
+reward:
+  tracking:
+    tracking_upper_body_pos(keypoint_pos_tracking_local_product):
+      body_names: [".*_shoulder_pitch_link", ".*_elbow_link", ".*_wrist_roll_rubber_hand"]
+      weight: 0.1 # 降低关注度
+      sigma: 0.5
+    tracking_upper_body_ori(keypoint_ori_tracking_local_product):
+      body_names: [".*_shoulder_pitch_link", ".*_elbow_link", ".*_wrist_roll_rubber_hand"]
+      weight: 0.1 # 降低关注度
+      sigma: 1.0
+  
+  object_tracking:
+    # _multiplicative: true
+    object_pos_tracking: {weight: 2.0, sigma: 0.5} # 提高权重
+    object_ori_tracking: {weight: 2.0, sigma: 0.5} # 提高权重
+    eef_contact_exp:     {weight: 3.0, enabled: true, pos_sigma: 0.3, frc_sigma: 40.0, frc_thres: 10.0, gain: 5.0} # 大幅提高接触奖励

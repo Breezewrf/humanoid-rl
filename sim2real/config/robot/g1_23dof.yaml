@@ -1,0 +1,248 @@
+ROBOT_TYPE: 'g1_23dof' # Robot name, "go2", "b2", "b2w", "h1", "go2w", "g1" 
+ ### REAL
+# # DOMAIN_ID: 0 # Domain id
+# # # Interface
+# # INTERFACE: "en0" # Yuanhang: in simulation, lo0 for mac, lo for linux
+
+## SIM
+DOMAIN_ID: 0 # Domain id
+# Interface
+INTERFACE: "lo" # Yuanhang: in simulation, lo0 for mac, lo for linux
+MOCAP_IP: "localhost"
+USE_JOYSTICK: False
+
+
+UNITREE_LEGGED_CONST:
+  HIGHLEVEL: 0xEE
+  LOWLEVEL: 0xFF
+  TRIGERLEVEL: 0xF0
+  PosStopF: 2146000000.0
+  VelStopF: 16000.0
+  MODE_MACHINE: 5
+  MODE_PR:  0
+
+
+joint_pos_lower_limit:
+  left_hip_pitch_joint: -2.5307
+  right_hip_pitch_joint: -2.5307  
+  waist_yaw_joint: -2.6180
+  left_hip_roll_joint: -0.5236
+  right_hip_roll_joint: -2.9671
+  left_hip_yaw_joint: -2.7576
+  right_hip_yaw_joint: -2.7576
+  left_knee_joint: -0.0873
+  right_knee_joint: -0.0873
+  left_shoulder_pitch_joint: -3.0892
+  right_shoulder_pitch_joint: -3.0892
+  left_ankle_pitch_joint: -0.8727
+  right_ankle_pitch_joint: -0.8727
+  left_shoulder_roll_joint: -1.5882
+  right_shoulder_roll_joint: -2.2515
+  left_ankle_roll_joint: -0.2618
+  right_ankle_roll_joint: -0.2618
+  left_shoulder_yaw_joint: -2.6180
+  right_shoulder_yaw_joint: -2.6180
+  left_elbow_joint: -1.0472
+  right_elbow_joint: -1.0472
+  left_wrist_roll_joint: -1.9722
+  right_wrist_roll_joint: -1.9722
+
+joint_pos_upper_limit:
+  left_hip_pitch_joint: 2.8798
+  right_hip_pitch_joint: 2.8798
+  waist_yaw_joint: 2.6180
+  left_hip_roll_joint: 2.9671
+  right_hip_roll_joint: 0.5236
+  left_hip_yaw_joint: 2.7576
+  right_hip_yaw_joint: 2.7576
+  left_knee_joint: 2.8798
+  right_knee_joint: 2.8798
+  left_shoulder_pitch_joint: 2.6704
+  right_shoulder_pitch_joint: 2.6704
+  left_ankle_pitch_joint: 0.5236
+  right_ankle_pitch_joint: 0.5236
+  left_shoulder_roll_joint: 2.2515
+  right_shoulder_roll_joint: 1.5882
+  left_ankle_roll_joint: 0.2618
+  right_ankle_roll_joint: 0.2618
+  left_shoulder_yaw_joint: 2.6180
+  right_shoulder_yaw_joint: 2.6180
+  left_elbow_joint: 2.0944
+  right_elbow_joint: 2.0944
+  left_wrist_roll_joint: 1.9722
+  right_wrist_roll_joint: 1.9722
+
+joint_velocity_limit:
+  left_hip_pitch_joint: 32.0
+  right_hip_pitch_joint: 32.0
+  waist_yaw_joint: 32.0
+  left_hip_roll_joint: 32.0
+  right_hip_roll_joint: 32.0
+  left_hip_yaw_joint: 32.0
+  right_hip_yaw_joint: 32.0
+  left_knee_joint: 20.0
+  right_knee_joint: 20.0
+  left_shoulder_pitch_joint: 37.0
+  right_shoulder_pitch_joint: 37.0
+  left_ankle_pitch_joint: 37.0
+  right_ankle_pitch_joint: 37.0
+  left_shoulder_roll_joint: 37.0
+  right_shoulder_roll_joint: 37.0
+  left_ankle_roll_joint: 37.0
+  right_ankle_roll_joint: 37.0
+  left_shoulder_yaw_joint: 37.0
+  right_shoulder_yaw_joint: 37.0
+  left_elbow_joint: 37.0
+  right_elbow_joint: 37.0
+  left_wrist_roll_joint: 37.0
+  right_wrist_roll_joint: 37.0
+
+joint_effort_limit:
+  left_hip_pitch_joint: 88.0
+  left_hip_roll_joint: 88.0
+  left_hip_yaw_joint: 88.0
+  left_knee_joint: 139.0
+  left_ankle_pitch_joint: 50.0
+  left_ankle_roll_joint: 50.0
+  right_hip_pitch_joint: 88.0
+  right_hip_roll_joint: 88.0
+  right_hip_yaw_joint: 88.0
+  right_knee_joint: 139.0
+  right_ankle_pitch_joint: 50.0
+  right_ankle_roll_joint: 50.0
+  waist_yaw_joint: 88.0
+  left_shoulder_pitch_joint: 25.0
+  left_shoulder_roll_joint: 25.0
+  left_shoulder_yaw_joint: 25.0
+  left_elbow_joint: 25.0
+  left_wrist_roll_joint: 25.0
+  right_shoulder_pitch_joint: 25.0
+  right_shoulder_roll_joint: 25.0
+  right_shoulder_yaw_joint: 25.0
+  right_elbow_joint: 25.0
+  right_wrist_roll_joint: 25.0
+
+SIMULATE_DT: 0.005  # Need to be larger than the runtime of viewer.sync()
+VIEWER_DT: 0.02  # Viewer update time
+ROBOT_SCENE: "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/sim2real/data/robots/g1/g1_23dof_rubberhand-suitcase.xml"
+
+MOTOR2JOINT: [0, 1, 2, 3, 4, 5,
+              6, 7, 8, 9, 10, 11,
+              12, 13, 14, 
+              15, 16, 17, 18, 19, 20, 21, 
+              22]
+            
+JOINT2MOTOR: [0, 1, 2, 3, 4, 5,
+              6, 7, 8, 9, 10, 11,
+              12, 13, 14, 
+              15, 16, 17, 18, 19, 20, 21, 
+              22]
+
+MOTOR_KP: [
+    100, 100, 100, 200, 20, 20,
+    100, 100, 100, 200, 20, 20,
+    400, 
+    90, 60, 20, 60, 4,
+    90, 60, 20, 60, 4
+]
+
+MOTOR_KD: [
+   2.5, 2.5, 2.5, 5, 0.2, 0.1,
+   2.5, 2.5, 2.5, 5, 0.2, 0.1,
+   5.0,
+   2.0, 1.0, 0.4, 1.0, 0.2, 
+   2.0, 1.0, 0.4, 1.0, 0.2
+]
+
+WeakMotorJointIndex:
+  left_hip_yaw_joint: 0
+  left_hip_roll_joint: 1
+  left_hip_pitch_joint: 2
+  left_knee_joint: 3
+  left_ankle_pitch_joint: 4
+  left_ankle_roll_joint: 5
+  right_hip_yaw_joint: 6
+  right_hip_roll_joint: 7
+  right_hip_pitch_joint: 8
+  right_knee_joint: 9
+  right_ankle_pitch_joint: 10
+  right_ankle_roll_joint: 11
+  waist_yaw_joint : 12
+  left_shoulder_pitch_joint: 13
+  left_shoulder_roll_joint: 14
+  left_shoulder_yaw_joint: 15
+  left_elbow_joint: 16
+  left_wrist_roll_joint: 17
+  right_shoulder_pitch_joint: 18
+  right_shoulder_roll_joint: 19
+  right_shoulder_yaw_joint: 20
+  right_elbow_joint: 21
+  right_wrist_roll_joint: 22
+
+NUM_MOTORS: 23
+NUM_JOINTS: 23
+
+DEFAULT_DOF_ANGLES: [
+    -0.1,  # left_hip_pitch_joint 
+    0.0,  # left_hip_roll_joint
+    0.0,  # left_hip_yaw_joint
+    0.3,  # left_knee_joint
+    -0.2, # left_ankle_pitch_joint
+    0.0,  # left_ankle_roll_joint
+    -0.1, # right_hip_pitch_joint
+    0.0,  # right_hip_roll_joint
+    0.0,  # right_hip_yaw_joint
+    0.3,  # right_knee_joint
+    -0.2, # right_ankle_pitch_joint
+    0.0,  # right_ankle_roll_joint
+    0.0,  # waist_yaw_joint
+    0.0,  # left_shoulder_pitch_joint
+    0.0,  # left_shoulder_roll_joint
+    0.0,  # left_shoulder_yaw_joint
+    0.0,  # left_elbow_joint
+    0.0,  # left_wrist_roll_joint
+    0.0,  # right_shoulder_pitch_joint
+    0.0,  # right_shoulder_roll_joint
+    0.0,  # right_shoulder_yaw_joint
+    0.0,  # right_elbow_joint
+    0.0,  # right_wrist_roll_joint
+]
+
+DEFAULT_MOTOR_ANGLES: [
+    -0.1,  # left_hip_pitch_joint 
+    0.0,  # left_hip_roll_joint
+    0.0,  # left_hip_yaw_joint
+    0.3,  # left_knee_joint
+    -0.2, # left_ankle_pitch_joint
+    0.0,  # left_ankle_roll_joint
+    -0.1, # right_hip_pitch_joint
+    0.0,  # right_hip_roll_joint
+    0.0,  # right_hip_yaw_joint
+    0.3,  # right_knee_joint
+    -0.2, # right_ankle_pitch_joint
+    0.0,  # right_ankle_roll_joint
+    0.0,  # waist_yaw_joint
+    0.0,  # left_shoulder_pitch_joint
+    0.0,  # left_shoulder_roll_joint
+    0.0,  # left_shoulder_yaw_joint
+    0.0,  # left_elbow_joint
+    0.0,  # left_wrist_roll_joint
+    0.0,  # right_shoulder_pitch_joint
+    0.0,  # right_shoulder_roll_joint
+    0.0,  # right_shoulder_yaw_joint
+    0.0,  # right_elbow_joint
+    0.0,  # right_wrist_roll_joint
+]
+
+USE_SENSOR: False
+
+motor_effort_limit_list: [88.0, 88.0, 88.0, 139.0, 50.0, 50.0, 
+                        88.0, 88.0, 88.0, 139.0, 50.0, 50.0, 
+                        88.0,
+                        25.0, 25.0, 25.0, 25.0, 
+                        25.0, 
+                        25.0, 25.0, 25.0, 25.0, 
+                        25.0]
+
+ENABLE_ELASTIC_BAND: True
+FREE_BASE: False
