@@ -110,8 +110,8 @@ def interpolate(motion, source_fps: int, target_fps: int):
         end_t = T / source_fps
         ts_source = np.arange(0, end_t, 1 / source_fps)
         ts_target = np.arange(0, end_t, 1 / target_fps)
-        if ts_target[-1] > ts_source[-1]:
-            ts_target = ts_target[:-1]
+        # Clip ts_target to ensure no value exceeds ts_source[-1] (accounts for floating-point precision)
+        ts_target = ts_target[ts_target <= ts_source[-1]]
         motion["body_pos_w"] = lerp(ts_target, ts_source, motion["body_pos_w"].reshape(T, -1)).reshape(len(ts_target), -1, 3)
         motion["body_lin_vel_w"] = lerp(ts_target, ts_source, motion["body_lin_vel_w"].reshape(T, -1)).reshape(len(ts_target), -1, 3)
         motion["body_quat_w"] = slerp(ts_target, ts_source, motion["body_quat_w"])
