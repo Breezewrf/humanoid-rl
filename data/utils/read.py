@@ -35,8 +35,12 @@ def read_metadata(file_path):
 def read_pkldata(file_path):
     try:
         import pickle
-        with open(file_path, 'rb') as f:
-            data = pickle.load(f)
+        try:
+            with open(file_path, 'rb') as f:
+                data = pickle.load(f)
+        except Exception:
+            import joblib
+            data = joblib.load(file_path)
         print(f"\nPKL file: {file_path}")
         if hasattr(data, "keys"):
             print("Keys:", list(data.keys()))

@@ -6,7 +6,20 @@ import time
 import argparse
 
 MODEL_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/sim2real/data/robots/g1/g1_23dof.xml"
-NPZ_FILE_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/sim2real/data/motion/g1/Walk_B15_-_Walk_turn_around_23dof/motion.npz"
+NPZ_FILE_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/active_adaptation/assets_mjcf/g1_29dof_nohand/g1_23dof_lock_wrist.xml"
+
+# MODEL_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/sim2real/data/robots/g1/g1_29dof_rubberhand-suitcase.xml"
+# NPZ_FILE_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/sim2real/data/motion/g1/Walk_B15_-_Walk_turn_around_23dof/motion.npz"
+NPZ_FILE_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/data/utils/output/dance/motion.npz"
+NPZ_FILE_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/data/utils/output/CharlestonDance/motion.npz"
+NPZ_FILE_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/data/utils/output/CharlestonDance_lock_wrist/motion.npz"
+
+# MODEL_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/active_adaptation/assets_mjcf/g1_29dof_nohand/g1_23dof_lock_wrist.xml"
+NPZ_FILE_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/data/utils/output/CharlestonDance_lock_wrist/motion.npz"
+
+# MODEL_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/active_adaptation/assets_mjcf/g1_29dof_nohand/g1_23dof_rubberhand.xml"
+# NPZ_FILE_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/data/utils/output/CharlestonDance_lock_wrist/motion_remapped.npz"
+NPZ_FILE_PATH = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/data/utils/output/Hooks_punch/motion.npz"
 
 JOINT_DOF = 29  # 关节自由度数量
 ROOT_BODY_INDEX = 0 # 假设第一个 body (索引 0) 是根部/骨盆
@@ -66,6 +79,7 @@ def visualize_full_motion(model_path, npz_path):
             
             # 设置到 MuJoCo 的 qpos
             data.qpos[0:3] = root_pos 
+            print(f"Frame {frame_idx}: Root Pos: {root_pos}")
             # 注意：MuJoCo 四元数顺序是 (w, x, y, z)，请确保您的 NPZ 数据是这个顺序
             data.qpos[3:7] = root_quat
             

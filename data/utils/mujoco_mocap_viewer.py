@@ -9,7 +9,10 @@ from common import ZMQSubscriber, PORTS
 from typing import List
 
 scene = "active_adaptation/assets_mjcf/g1_29dof_nohand/g1_29dof_nohand.xml"
-scene = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/sim2real/data/robots/g1/g1_29dof_rubberhand-suitcase.xml"
+# scene = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/sim2real/data/robots/g1/g1_29dof_rubberhand-suitcase.xml"
+scene = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/sim2real/data/robots/g1/g1_23dof.xml"
+# scene = "/home/breeze/Desktop/workplace/Humanoid/GMR/assets/unitree_g1/g1_mocap_29dof.xml"
+# scene = "/home/breeze/Desktop/workplace/Humanoid/humanoid-rl/active_adaptation/assets_mjcf/g1_29dof_nohand/g1_23dof_rubberhand.xml"
 # scene = "active_adaptation/assets_mjcf/g1_29dof_nohand/g1_29dof_nohand-suitcase.xml"
 # # scene = "active_adaptation/assets_mjcf/g1_29dof_nohand/g1_29dof_nohand-stool.xml"
 # scene = "active_adaptation/assets_mjcf/g1_29dof_nohand/g1_29dof_nohand-stool-low.xml"
@@ -95,6 +98,7 @@ class MuJoCoMocapViewer:
         # Initialize ZMQ subscribers
         self.joint_subscriber = ZMQSubscriber(PORTS['joint_pos'], ip=JOINT_STATE_PUBLISHER_IP)
         for root_joint_name in self.root_joint_names:
+            print(f"Setting up root joint subscriber for: {root_joint_name}")
             subscriber = ZMQSubscriber(PORTS[f"{root_joint_name}_pose"], ip=BODY_POSE_PUBLISHER_IP)
             self.root_joint_subscribers.append(subscriber)
 
