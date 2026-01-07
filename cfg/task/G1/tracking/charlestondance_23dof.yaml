@@ -1,0 +1,14 @@
+# @package task
+defaults:
+  - base/tracking-base-23dof
+  - _self_
+
+name: G1CarlestonDance23DofRemapped
+
+robot: 
+  name: g1_23dof
+  robot_type: g1_23dof
+
+command:
+  root_body_name: "pelvis"
+  data_path: data/motion/g1/CharlestonDance_23dof_remapped
