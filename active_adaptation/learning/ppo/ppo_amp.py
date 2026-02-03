@@ -77,8 +77,8 @@ class PPOConfig:
     enable_residual_distillation: bool = True
 
     # lr linear schedule or adaptive lr
-    lr_start: float = 3e-4
-    lr_end: float = 1e-4
+    lr_start: float = 5e-4
+    lr_end: float = 5e-4
     lr_decay_iters: int = 500
 
     desired_kl: float | None = 0.01 # None
