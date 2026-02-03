@@ -46,7 +46,7 @@ class AMPConfig:
             # r"data/motion/amp/lafan/walk1_subject.*",
             # r"data/motion/0531pap_val/.*",
     )
-    lr: float = 1e-5
+    lr: float = 5e-4
     weight_decay: float = 1e-3
     reward_scale: float = 1.0
     gan_type: str = "wgan" # "gan", "wgan", "lsgan"
@@ -71,7 +71,7 @@ class PPOConfig:
     _target_: str = "active_adaptation.learning.ppo.ppo_amp.PPOAMP"
     name: str = "ppo_amp"
     train_every: int = 32
-    ppo_epochs: int = 3
+    ppo_epochs: int = 5
     num_minibatches: int = 8
     clip_param: float = 0.2
     enable_residual_distillation: bool = True
