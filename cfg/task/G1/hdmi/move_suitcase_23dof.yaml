@@ -1,6 +1,6 @@
 # @package task
 defaults:
-  - base/hdmi-base-23dof-amp
+  - base/hdmi-base-23dof
   - _self_
 
 name: G1TrackSuitcase23DOF
@@ -41,16 +41,24 @@ command:
 
   object_asset_name: "suitcase"
   object_body_name:  "suitcase"
-
+  # For Box size 20 30 40 cm
   # contact_target_pos_offset:
   #   - [-0.1, 0.18, 0.25]  # left wrist
   #   - [-0.1,-0.18, 0.25]  # right wrist
   # contact_eef_pos_offset:
   #   - [0.05, 0.0, 0.0]  # left wrist
   #   - [0.05, 0.0, 0.0]  # right wrist
+  # contact_target_pos_offset:
+  #   - [-0.10,  0.225, 0.205]  # left wrist
+  #   - [-0.10, -0.225, 0.205]  # right wrist
+  # contact_eef_pos_offset:
+  #   - [0.05, 0.0, 0.0]  # left wrist
+  #   - [0.05, 0.0, 0.0]  # right wrist
+
+  # For Box size 15 35 40 cm
   contact_target_pos_offset:
-    - [-0.10,  0.225, 0.205]  # left wrist
-    - [-0.10, -0.225, 0.205]  # right wrist
+    - [-0.075,  0.225, 0.25]  # left wrist
+    - [-0.075, -0.225, 0.25]  # right wrist
   contact_eef_pos_offset:
     - [0.05, 0.0, 0.0]  # left wrist
     - [0.05, 0.0, 0.0]  # right wrist
@@ -67,19 +75,19 @@ randomization:
     scale_range: [0.9, 1.1]
 
 # Modify reward weights
-reward:
-  tracking:
-    tracking_upper_body_pos(keypoint_pos_tracking_local_product):
-      body_names: [".*_shoulder_pitch_link", ".*_elbow_link", ".*_wrist_roll_rubber_hand"]
-      weight: 0.1 # 降低关注度
-      sigma: 0.5
-    tracking_upper_body_ori(keypoint_ori_tracking_local_product):
-      body_names: [".*_shoulder_pitch_link", ".*_elbow_link", ".*_wrist_roll_rubber_hand"]
-      weight: 0.1 # 降低关注度
-      sigma: 1.0
+# reward:
+#   tracking:
+#     tracking_upper_body_pos(keypoint_pos_tracking_local_product):
+#       body_names: [".*_shoulder_pitch_link", ".*_elbow_link", ".*_wrist_roll_rubber_hand"]
+#       weight: 0.1 # 降低关注度
+#       sigma: 0.5
+#     tracking_upper_body_ori(keypoint_ori_tracking_local_product):
+#       body_names: [".*_shoulder_pitch_link", ".*_elbow_link", ".*_wrist_roll_rubber_hand"]
+#       weight: 0.1 # 降低关注度
+#       sigma: 1.0
   
-  object_tracking:
-    # _multiplicative: true
-    object_pos_tracking: {weight: 2.0, sigma: 0.5} # 提高权重
-    object_ori_tracking: {weight: 2.0, sigma: 0.5} # 提高权重
-    eef_contact_exp:     {weight: 3.0, enabled: true, pos_sigma: 0.3, frc_sigma: 40.0, frc_thres: 10.0, gain: 5.0} # 大幅提高接触奖励
+#   object_tracking:
+#     # _multiplicative: true
+#     object_pos_tracking: {weight: 2.0, sigma: 0.5} # 提高权重
+#     object_ori_tracking: {weight: 2.0, sigma: 0.5} # 提高权重
+#     eef_contact_exp:     {weight: 3.0, enabled: true, pos_sigma: 0.3, frc_sigma: 40.0, frc_thres: 10.0, gain: 5.0} # 大幅提高接触奖励
