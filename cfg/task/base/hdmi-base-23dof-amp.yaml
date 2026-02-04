@@ -10,7 +10,7 @@ viewer:
 
 terrain: plane
 
-num_envs: 2048
+num_envs: 4096
 max_episode_length: 1000
 
 sim:
